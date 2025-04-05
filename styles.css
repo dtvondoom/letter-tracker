@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Delius', cursive, sans-serif;
+    line-height: 1.6;
+    color: #79553D; 
+    background-color: #F5F5DC; 
+    background-image: url('cottage.png');
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Center all text content */
+}
+
+header {
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 3px dotted #8B5A2B; /* Dotted border like a path */
+}
+
+h1 {
+    color: #8B5A2B; 
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1::before, h1::after {
+    content: "🍄"; /* Mushroom emoji */
+    margin: 0 10px;
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    background-color: #B33B3B;
+    color: white;
+    border: none;
+    border-radius: 30px; /* Rounded like a mushroom cap */
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: inherit;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #8B2B2B;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#tracking-info {
+    background-color: #E6D1A8;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    border: 2px solid #8B5A2B;
+    max-width: 90%;
+    
+    /* Animation setup */
+    transition: all 0.6s ease;
+    max-height: 1000px;
+    opacity: 1;
+    transform: translateY(0);
+    overflow: hidden;
+}
+
+#tracking-info.hidden {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    transform: translateY(-20px);
+}
+
+#tracking-info h2 {
+    margin-bottom: 20px;
+    color: #556B2F; 
+    font-size: 1.8rem;
+}
+
+#tracking-info img {
+    max-width: 100%;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    border: 3px solid #d8c464;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: block; /* Ensures the image is properly centered */
+}
+
+.update-time {
+    font-style: italic;
+    color: #79553D; 
+    margin-top: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 8px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 15px 0;
+    border-top: 3px dotted #8B5A2B; 
+    color: #8B5A2B;
+    font-style: italic;
+}
+
+footer p::before, footer p::after {
+    content: "🏡"; 
+    margin: 0 10px;
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+}

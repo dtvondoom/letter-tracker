@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Letter Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Where is the letter?</h1>
+        </header>
+
+        <main>
+            <button id="track-button">Click here to find out</button>
+
+            <div id="tracking-info" class="hidden">
+                <h2>Letter status:</h2>
+                <img src="elta.jpg" alt="Letter tracking information">
+                <p class="update-time">Last updated: 05/04/2025, 16:20</p>
+            </div>
+
+        </main>
+
+        <footer>
+            <h3>Designed by Tzim</h3>
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById('track-button').addEventListener('click', function() {
+            document.getElementById('tracking-info').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
