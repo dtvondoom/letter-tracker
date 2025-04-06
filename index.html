@@ -14,7 +14,7 @@
         </header>
 
         <main>
-            <button id="track-button">Click here to find out</button>
+            <button id="track-button"></button>
 
             <div id="tracking-info" class="hidden">
                 <h2>Letter status:</h2>
@@ -31,9 +31,30 @@
     </div>
 
     <script>
-        document.getElementById('track-button').addEventListener('click', function() {
-            document.getElementById('tracking-info').classList.toggle('hidden');
-        });
+        document.addEventListener('DOMContentLoaded', function() {
+    const trackingInfo = document.getElementById('tracking-info');
+    const button = document.getElementById('track-button');
+    
+    // Set initial button text based on initial state
+    if (trackingInfo.classList.contains('hidden')) {
+        button.textContent = 'Click here to find out';
+    } else {
+        button.textContent = 'Hide info';
+    }
+    
+    // Add click event listener
+    button.addEventListener('click', function() {
+        // Toggle the hidden class on the tracking info div
+        trackingInfo.classList.toggle('hidden');
+        
+        // Change button text based on visibility state
+        if (trackingInfo.classList.contains('hidden')) {
+            button.textContent = 'Click here to find out';
+        } else {
+            button.textContent = 'Hide info';
+        }
+    });
+});
     </script>
 
 </body>
