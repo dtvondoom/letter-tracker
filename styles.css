@@ -127,6 +127,54 @@ footer p::before, footer p::after {
     margin: 0 10px;
 }
 
+/* Styling for the arrival message */
+#arrival-message {
+    margin: 15px auto 25px auto;
+    transition: all 0.6s ease;
+    max-height: 100px;
+    opacity: 1;
+}
+
+#arrival-message.hidden {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.its-here-container {
+    position: relative;
+    display: inline-block;
+}
+
+.its-here {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #556B2F; /* Forest green */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    margin-bottom: 0;
+    padding: 0;
+}
+
+/* Gradient line */
+.gradient-line {
+    height: 2px;
+    width: 80%;
+    margin: 0 auto;
+    background: linear-gradient(90deg, transparent, #B33B3B, transparent);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.its-here {
+    animation: pulse 2s infinite ease-in-out;
+}
+
 /* For very small screens */
 @media (max-width: 480px) {
     h1 {
